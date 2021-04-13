@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+if [ ! -f /usr/bin/lsb_release ]; then
+  echo "Installing lsb_release . . ."
+  apt-get -q -q update
+  DEBIAN_FRONTEND=noninteractive apt-get -q -q install -y lsb-release < /dev/null
+  echo
+fi
+
 if [ "`lsb_release -d | sed 's/.*:\s*//'`" == "Debian GNU/Linux 10 (buster)" ]; then
   DISTRO=debian_10
 fi

@@ -9,19 +9,19 @@ RESULT=$(dialog --stdout --nocancel --default-item 1 --title "Bespike Server Ins
 1 "Daemonbuilder" \
 9 Exit)
 
-if [ $result = ]
+if [ $RESULT = ]
 then
   bash $(basename $0) && exit;
 fi
 
-if [ $result = 1 ]
+if [ $RESULT = 1 ]
 then
   clear;
   cd $HOME/bespikeinstall/install
   source bootstrap_coin.sh;
 fi
 
-if [ $result = 9 ]
+if [ $RESULT = 9 ]
 then
   clear;
   exit;

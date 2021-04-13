@@ -17,7 +17,7 @@ else
   FIRST_TIME_SETUP=1
 fi
 
-if [ ("FIRST_TIME_SETUP" == "1") ]; then
+if [ ("$FIRST_TIME_SETUP" == "1") ]; then
   clear
   
   source functions.sh
