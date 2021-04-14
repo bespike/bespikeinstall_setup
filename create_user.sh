@@ -65,7 +65,7 @@ if [[ ("$UsingSSH" == "yes") ]]; then
   chmod 700 /home/${bespikeadmin}/.ssh
   chmod 644 /home/${bespikeadmin}/.ssh/authorized_keys
   authkeys=/home/${bespikeadmin}/.ssh/authorized_keys
-  echo "$ssh_key" > "authkeys"
+  echo "$ssh_key" > "$authkeys"
 fi
 if [[ ("$UsingSSH" == "no") ]]; then
    # New User Password Login Creation

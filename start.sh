@@ -47,7 +47,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
   # Check for user
   echo -e "Installing needed packages for setup to continue . . .$COL_RESET"
   apt-get -q -q update
-  apt_get_quiet install dialog python3 python3-pip acl nano apt-transport-https sudo || exit 1
+  apt_get_quiet install dialog python3 python3-pip acl nano apt-transport-https || exit 1
   
   # Welcome
   message_box "Bespike Server Installer" \
